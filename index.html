@@ -2,13 +2,14 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
     <script src="Locomotion/Movement/movement.js"></script>
-    <title>First Steps (A-Frame)</title>
+    <title>Greed Island</title>
   </head>
   <body>
     <a-scene>
-      <a-plane rotation="-90 0 0" color="green" height="10" width="10" ></a-plane>
-      <a-sky color="blue"></a-sky>
+      
+      <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
       <a-entity id="player">
         <a-camera id="head" wasd-controls look-controls></a-camera>
         <a-entity id="leftHand" hand-controls="hand: left" smooth-locomotion="active: true"></a-entity>
